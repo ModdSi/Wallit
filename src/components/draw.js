@@ -6,14 +6,18 @@ function Draw({ income, setIncome }) {
   const [newMoney, setMoney] = useState("");
 
   const handlesubmit = (e) => {
+    const currentDate = new Date();
+
     e.preventDefault();
     setIncome([
       ...income,
       {
         name: newName,
         money: -parseInt(newMoney) || 0,
+        date: currentDate.toString(),
       },
     ]);
+    console.log(income);
   };
 
   return (
