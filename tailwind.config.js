@@ -17,6 +17,7 @@ module.exports = {
     "./src/components/Expense.js",
     "./src/components/draw.js",
   ],
+  darkMode: "class",
   theme: {
     extend: {
       keyframes: {

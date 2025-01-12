@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./styles/tailStyle.css";
+import * as motion from "motion/react-client";
 function Add({ income, setIncome }) {
   const [newName, setName] = useState("");
   const [newMoney, setMoney] = useState("");
@@ -16,7 +17,18 @@ function Add({ income, setIncome }) {
   };
 
   return (
-    <div className="  bg-customwhite w-full md:w-2/5 xl:w-2/4 px-4   rounded-[56px]">
+    <motion.div
+      initial={{ opacity: 0, scale: 0 }}
+      animate={{ opacity: 1, scale: 1 }}
+      // initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ amount: 0.8 }}
+      transition={{
+        duration: 0.4,
+        scale: { type: "spring", visualDuration: 0.4, bounce: 0.3 },
+      }}
+      className="  bg-customwhite w-full md:w-2/5 xl:w-2/4 px-4 py-6  rounded-[56px]"
+    >
       <form className="flex flex-col items-center" onSubmit={handlesubmit}>
         <h1 className=" text-xl my-6 justify-center  items-center text-gray-700">
           Add Income
@@ -45,7 +57,7 @@ function Add({ income, setIncome }) {
           Add
         </button>
       </form>
-    </div>
+    </motion.div>
   );
 }
 

@@ -1,5 +1,6 @@
 import "./styles/tailStyle.css";
 import { useEffect, useState } from "react";
+import * as motion from "motion/react-client";
 function TotalBalance({ income, setIncome }) {
   let total = 0;
 
@@ -21,10 +22,19 @@ function TotalBalance({ income, setIncome }) {
   }, [total, setIncome]);
 
   return (
-    <div class="   bg-customwhite w-full  md:w-2/5   items-center justify-between py-14  flex flex-col  rounded-[56px] ">
+    <motion.div
+      initial={{ opacity: 0, scale: 0 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{
+        duration: 0.4,
+        delay: 0.2,
+        scale: { type: "spring", visualDuration: 0.6, bounce: 0.3 },
+      }}
+      class="   bg-customwhite w-full  md:w-2/5   items-center justify-between py-14  flex flex-col  rounded-[56px] "
+    >
       <h1 className=" text-xl  xl:mx-20   text-gray-700">Total Balance</h1>
       <h1 className=" text-2xl  xl:mx-10   text-customGreen">{total}IQD</h1>
-    </div>
+    </motion.div>
   );
 }
 

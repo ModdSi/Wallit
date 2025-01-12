@@ -1,5 +1,5 @@
 import React from "react";
-
+import * as motion from "motion/react-client";
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -23,7 +23,19 @@ ChartJS.register(
 );
 function IncomeChart({ formattedData }) {
   return (
-    <div className=" w-full chart-container   xl:mt-8 bg-customwhite md:w-2/5 flex items-center justify-center flex-col  p-8  rounded-[56px]">
+    <motion.div
+      initial={{ opacity: 0, scale: 0 }}
+      animate={{ opacity: 1, scale: 1 }}
+      // initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ amount: 0.8 }}
+      transition={{
+        duration: 0.4,
+        delay: 0.4,
+        scale: { type: "spring", visualDuration: 0.9, bounce: 0.3 },
+      }}
+      className=" w-full chart-container    bg-customwhite md:w-2/5 flex items-center justify-center flex-col  p-8  rounded-[56px]"
+    >
       <h1 className="text-customGreen  text-2xl">Income Chart</h1>
       <Line
         data={formattedData}
@@ -39,7 +51,7 @@ function IncomeChart({ formattedData }) {
           },
         }}
       />
-    </div>
+    </motion.div>
   );
 }
 export default IncomeChart;

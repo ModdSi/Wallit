@@ -1,5 +1,5 @@
 import "./styles/tailStyle.css";
-
+import * as motion from "motion/react-client";
 function RecentIncome({ income, inORex }) {
   let reIncome = [...income].reverse();
   console.log("from recent" + inORex);
@@ -15,7 +15,19 @@ function RecentIncome({ income, inORex }) {
   });
 
   return (
-    <div className="bg-customwhite p-4 w-full md:w-2/5 xl:w-2/4 flex flex-col rounded-[56px] overflow-hidden min-h-[400px]">
+    <motion.div
+      initial={{ opacity: 0, scale: 0 }}
+      animate={{ opacity: 1, scale: 1 }}
+      // initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ amount: 0.8 }}
+      transition={{
+        duration: 0.4,
+        delay: 0.3,
+        scale: { type: "spring", visualDuration: 0.8, bounce: 0.3 },
+      }}
+      className="bg-customwhite p-4 w-full md:w-2/5 xl:w-2/4  flex flex-col rounded-[56px] overflow-hidden min-h-[400px]"
+    >
       <h1 className="text-lg mb-4 mt-2 mx-10 text-gray-700">Recent</h1>
       <div className="flex flex-col">
         {/* Check if there is no data */}
@@ -45,7 +57,7 @@ function RecentIncome({ income, inORex }) {
           })
         )}
       </div>
-    </div>
+    </motion.div>
   );
 }
 
