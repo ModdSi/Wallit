@@ -13,6 +13,7 @@ module.exports = {
     "./src/components/TotalBalance.js",
     "./src/components/Footer.js",
     "./src/components/InocmeChart.js",
+    "./src/components/ExpenseChart.js",
     "./src/components/Expense.js",
     "./src/components/draw.js",
   ],

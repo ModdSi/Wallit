@@ -24,10 +24,19 @@ function App() {
     }
   }, [income]);
 
-  const moneyValues = income.map((entry) => entry.money);
+  ////////// for income chart //////////////
+  const moneyValues = income.map((entry) => {
+    if (entry.money > 0) return entry.money;
+  });
+
+  const labels2 = [];
+  for (let i = 0; i < moneyValues.length; ++i) {
+    labels2.push(i.toString());
+  }
+
   console.log("this is money value for chart" + moneyValues);
   const formattedData = {
-    labels: ["1", "2", "3", "4", "5", "6"], // Use your actual labels
+    labels: labels2, // Use your actual labels
     datasets: [
       {
         label: "Money Gained",
@@ -39,15 +48,27 @@ function App() {
     ],
   };
 
-  if (income.money < 0) {
-    setIncome([
-      ...income,
-      {
-        name: "reset",
-        money: 0,
-      },
-    ]);
+  //////////////  for expense chart  ////////////////////
+  const moneyValues2 = income.map((entry) => {
+    if (entry.money < 0) return entry.money;
+  });
+
+  const labels = [];
+  for (let i = 0; i < moneyValues2.length; ++i) {
+    labels.push(i.toString());
   }
+  const formattedData2 = {
+    labels: labels, // Use your actual labels
+    datasets: [
+      {
+        label: "Money Diclined",
+        data: moneyValues2, // Make sure this is an array of numbers matching the labels
+        backgroundColor: "rgba(75,192,192,0.4)",
+        borderColor: "#903F3F",
+        borderWidth: 3,
+      },
+    ],
+  };
 
   var inORex = true;
 
@@ -84,6 +105,7 @@ function App() {
                     inORex={inORex}
                     income={income}
                     setIncome={setIncome}
+                    formattedData2={formattedData2}
                   />
                 }
               />

@@ -9,7 +9,7 @@ function Income({ income, setIncome, formattedData, inORex }) {
   return (
     <div class="   font-body font-semibold   w-full h-3/4  my-auto mb-0 flex flex-row flex-wrap justify-center gap-4">
       <Add income={income} setIncome={setIncome} />
-      <TotalBalance income={income} />
+      <TotalBalance income={income} setIncome={setIncome} />
       <RecentIncome income={income} inORex={inORex} />
       <IncomeChart formattedData={formattedData} />
     </div>
