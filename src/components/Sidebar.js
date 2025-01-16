@@ -5,7 +5,7 @@ import notebook from "../images/notebook.png";
 import { Link } from "react-router-dom";
 function SideBar({ inORex }) {
   return (
-    <div className=" xl:h-screen  mb-8 xl:mb-0  font-body font-semibold container bg-customGreen w-5/6 md:w-11/12 xl:w-52     rounded-[56px]  p-4 md:p-2 flex   items-center ">
+    <div className=" xl:h-[665px]  mb-8 xl:mb-0  font-body font-semibold container bg-customGreen w-5/6 md:w-11/12 xl:w-52     rounded-[56px]  p-4 md:p-2 flex   items-center ">
       <div
         id="buttons"
         className="w-screen flex xl:flex-col  flex-row justify-center"

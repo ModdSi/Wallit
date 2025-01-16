@@ -11,7 +11,10 @@ function App() {
   // localStorage.clear();
   const storedData = JSON.parse(localStorage.getItem("key"));
   if (!storedData) {
-    localStorage.setItem("key", JSON.stringify([{ name: "", money: 0 }]));
+    localStorage.setItem(
+      "key",
+      JSON.stringify([{ name: "", money: 0, date: "" }])
+    );
   }
   const [income, setIncome] = useState(storedData);
 
@@ -97,7 +100,10 @@ function App() {
                   />
                 }
               />
-              <Route path="/" element={<Home />} />
+              <Route
+                path="/"
+                element={<Home income={income} setIncome={setIncome} />}
+              />
               <Route
                 path="/expense"
                 element={

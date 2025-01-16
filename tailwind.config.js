@@ -16,7 +16,9 @@ module.exports = {
     "./src/components/ExpenseChart.js",
     "./src/components/Expense.js",
     "./src/components/draw.js",
-    "./src/components/Percentage.js",
+    "./src/components/percentage.js",
+    "./src/components/BarChart.js",
+    "./src/components/Doughnut.js",
   ],
   darkMode: "class",
   theme: {

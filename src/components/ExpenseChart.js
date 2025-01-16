@@ -36,14 +36,14 @@ function ExpenseChart({ formattedData2 }) {
       }}
       className=" w-full chart-container    bg-customwhite md:w-2/5 flex items-center justify-center flex-col  p-8  rounded-[56px]"
     >
-      <h1 className="text-customRed  text-2xl">Income Chart</h1>
+      <h1 className="text-customRed  text-2xl">Expense Chart</h1>
       <Line
         data={formattedData2}
         options={{
           plugins: {
             title: {
               display: true,
-              text: "Money Gained recently",
+              text: "Money Diclined recently",
             },
             legend: {
               display: false,

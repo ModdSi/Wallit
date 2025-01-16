@@ -14,7 +14,7 @@ function Draw({ income, setIncome }) {
       {
         name: newName,
         money: -parseInt(newMoney) || 0,
-        date: currentDate.toString(),
+        date: currentDate.getMonth(),
       },
     ]);
     console.log(income);
