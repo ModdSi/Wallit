@@ -14,8 +14,8 @@ function DonutChart({ incomePart, expensePart }) {
         label: "Votes",
         data: [incomePart, expensePart], // Values for each category
         backgroundColor: [
-          "rgb(101,152,53)",
-          "rgb(153,46,35)",
+          "rgb(101,120,53)",
+          "rgb(120,46,35)",
           "rgba(255, 206, 86, 0.2)",
           "rgba(75, 192, 192, 0.2)",
           "rgba(153, 102, 255, 0.2)",
@@ -58,7 +58,7 @@ function DonutChart({ incomePart, expensePart }) {
         delay: 0.4,
         scale: { type: "spring", visualDuration: 0.8, bounce: 0.3 },
       }}
-      className="flex flex-col justify-center items-center bg-customwhite w-full sm:h-[100px] md:h-[300px] xl:h-[400px] md:w-2/5 xl:w-2/5 px-20 py-12  rounded-[56px]"
+      className="flex flex-col justify-center items-center dark:bg-stone-400 bg-customwhite w-full sm:h-[100px] md:h-[300px] xl:h-[400px] md:w-2/5 xl:w-2/5 px-20 py-12  rounded-[56px]"
     >
       <h2>Actions</h2>
       <Doughnut data={data} options={options} />

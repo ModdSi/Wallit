@@ -83,7 +83,7 @@ function BarChart({ income }) {
         delay: 0.3,
         scale: { type: "spring", visualDuration: 0.6, bounce: 0.3 },
       }}
-      className="flex flex-col justify-center items-center  bg-customwhite w-full h-[300px] sm:h-[100px] md:h-[300px] xl:h-[400px] md:w-6/12 xl:w-3/6 px-4 py-0 xl:py-16 md:py-0 rounded-[56px]"
+      className="flex flex-col dark:bg-stone-400 justify-center items-center  bg-customwhite w-full h-[300px] sm:h-[100px] md:h-[300px] xl:h-[400px] md:w-6/12 xl:w-3/6 px-4 py-0 xl:py-16 md:py-0 rounded-[56px]"
     >
       <Bar data={data} options={options} />
     </motion.div>

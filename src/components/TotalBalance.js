@@ -30,10 +30,12 @@ function TotalBalance({ income, setIncome }) {
         delay: 0.2,
         scale: { type: "spring", visualDuration: 0.6, bounce: 0.3 },
       }}
-      class="   bg-customwhite w-full  md:w-2/5   items-center justify-around py-14  flex flex-col  rounded-[56px] "
+      class=" dark:bg-stone-400  bg-customwhite w-full  md:w-2/5   items-center justify-around py-14  flex flex-col  rounded-[56px] "
     >
       <h1 className=" text-2xl  xl:mx-20   text-gray-700">Total Balance</h1>
-      <h1 className=" text-3xl  xl:mx-10   text-customGreen">{total}IQD</h1>
+      <h1 className=" text-3xl  xl:mx-10 dark:text-yellow-800  text-customGreen">
+        {total}IQD
+      </h1>
     </motion.div>
   );
 }

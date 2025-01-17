@@ -20,7 +20,7 @@ module.exports = {
     "./src/components/BarChart.js",
     "./src/components/Doughnut.js",
   ],
-  darkMode: "class",
+  darkMode: "selector",
   theme: {
     extend: {
       keyframes: {

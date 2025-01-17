@@ -5,14 +5,14 @@ import notebook from "../images/notebook.png";
 import { Link } from "react-router-dom";
 function SideBar({ inORex }) {
   return (
-    <div className=" xl:h-[665px]  mb-8 xl:mb-0  font-body font-semibold container bg-customGreen w-5/6 md:w-11/12 xl:w-52     rounded-[56px]  p-4 md:p-2 flex   items-center ">
+    <div className=" dark:bg-stone-600 xl:h-[665px]  mb-8 xl:mb-0  font-body font-semibold container bg-customGreen w-5/6 md:w-11/12 xl:w-52     rounded-[56px]  p-4 md:p-2 flex   items-center ">
       <div
         id="buttons"
         className="w-screen flex xl:flex-col  flex-row justify-center"
       >
         {/* btn 1 */}
         <Link to="/">
-          <div className=" md:hover:bg-lime-700 my-auto flex flex-row rounded-full cursor-pointer ">
+          <div className=" dark:hover:bg-yellow-700 transition-all md:hover:bg-lime-700 my-auto flex flex-row rounded-full cursor-pointer ">
             <div className=" my-auto   mx-4 md:ml-6 h-8 w-8">
               <img src={home} />
             </div>
@@ -29,7 +29,7 @@ function SideBar({ inORex }) {
               inORex = true;
               console.log(inORex);
             }}
-            className=" md:hover:bg-lime-700 my-auto flex flex-row  rounded-full cursor-pointer"
+            className=" dark:hover:bg-yellow-700 transition-all md:hover:bg-lime-700 my-auto flex flex-row  rounded-full cursor-pointer"
           >
             <div className=" my-auto mx-4 md:ml-6 h-8 w-8">
               <img src={coin} />
@@ -48,7 +48,7 @@ function SideBar({ inORex }) {
               inORex = false;
               console.log(inORex);
             }}
-            className=" md:hover:bg-lime-700 my-auto flex flex-row rounded-full cursor-pointer"
+            className=" dark:hover:bg-yellow-700 md:hover:bg-lime-700 transition-all my-auto flex flex-row rounded-full cursor-pointer"
           >
             <div className=" my-auto mx-4 md:ml-6 h-8 w-8">
               <img src={notebook} />

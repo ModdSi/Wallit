@@ -25,7 +25,7 @@ function RecentIncome({ income, inORex }) {
         delay: 0.3,
         scale: { type: "spring", visualDuration: 0.8, bounce: 0.3 },
       }}
-      className="bg-customwhite p-4  w-full md:w-2/5 xl:w-2/4 flex flex-col rounded-[56px] overflow-hidden min-h-[400px]"
+      className="bg-customwhite dark:bg-stone-400 p-4  w-full md:w-2/5 xl:w-2/4 flex flex-col rounded-[56px] overflow-hidden min-h-[400px]"
     >
       <h1 className="text-lg mb-4 mt-2 mx-10 text-gray-700">Recent</h1>
       <div className="flex flex-col">

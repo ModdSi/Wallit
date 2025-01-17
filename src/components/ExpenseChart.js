@@ -34,7 +34,7 @@ function ExpenseChart({ formattedData2 }) {
         delay: 0.4,
         scale: { type: "spring", visualDuration: 0.9, bounce: 0.3 },
       }}
-      className=" w-full chart-container    bg-customwhite md:w-2/5 flex items-center justify-center flex-col  p-8  rounded-[56px]"
+      className=" w-full chart-container  dark:bg-stone-400  bg-customwhite md:w-2/5 flex items-center justify-center flex-col  p-8  rounded-[56px]"
     >
       <h1 className="text-customRed  text-2xl">Expense Chart</h1>
       <Line

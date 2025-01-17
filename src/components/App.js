@@ -6,9 +6,12 @@ import Home from "./Home";
 import Expense from "./Expense";
 import { useEffect, useState } from "react";
 import Footer from "./Footer";
+import moon from "../images/moon.png";
+import sun from "../images/sun.png";
 
 function App() {
   // localStorage.clear();
+  const [dark, setDark] = useState(true);
   const storedData = JSON.parse(localStorage.getItem("key"));
   if (!storedData) {
     localStorage.setItem(
@@ -73,14 +76,29 @@ function App() {
     ],
   };
 
-  var inORex = true;
+  function handleDarkmode() {
+    setDark((prevDark) => !prevDark);
+  }
 
+  var inORex = true;
   return (
-    <div className="flex flex-col   overflow-hidden ">
-      <div className="navbar p-4 md:mb-4 xl:mb-0 ">
-        <h1 className=" text-lime-600 text-3xl mt-4 mx-20 font-medium">
-          Wall<span className=" text-black">it</span>
+    <div
+      className={`flex flex-col overflow-hidden ${
+        dark ? "dark" : "light"
+      } dark:bg-stone-800 transition-all`}
+    >
+      <div className="navbar flex flex-row p-4 md:mb-4 xl:mb-0 mt-4 mx-4 sm:mx-8 justify-between">
+        <h1 className="dark:text-yellow-600 text-lime-600 text-4xl  font-medium">
+          Wall<span className=" text-black dark:text-white">it</span>
         </h1>
+        <div>
+          <div
+            onClick={handleDarkmode}
+            className="mt-0 w-[30px] cursor-pointer"
+          >
+            <img src={dark ? sun : moon} />
+          </div>
+        </div>
       </div>
       <div className=" ">
         <div className=" w-screen  flex xl:flex-row flex-col  xl:justify-start items-center xl:items-start  p-4  my-0 ">

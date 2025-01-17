@@ -31,7 +31,7 @@ function Draw({ income, setIncome }) {
         duration: 0.4,
         scale: { type: "spring", visualDuration: 0.4, bounce: 0.3 },
       }}
-      className="  bg-customwhite w-full md:w-2/5 xl:w-2/4 px-4   rounded-[56px]"
+      className=" dark:bg-stone-400 bg-customwhite w-full md:w-2/5 xl:w-2/4 px-4   rounded-[56px]"
     >
       <form className="flex flex-col items-center" onSubmit={handlesubmit}>
         <h1 className=" text-xl my-6 justify-center  items-center text-gray-700">

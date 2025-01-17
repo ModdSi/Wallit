@@ -34,9 +34,11 @@ function IncomeChart({ formattedData }) {
         delay: 0.4,
         scale: { type: "spring", visualDuration: 0.9, bounce: 0.3 },
       }}
-      className=" w-full chart-container    bg-customwhite md:w-2/5 flex items-center justify-center flex-col  p-8  rounded-[56px]"
+      className=" w-full chart-container  dark:bg-stone-400  bg-customwhite md:w-2/5 flex items-center justify-center flex-col  p-8  rounded-[56px]"
     >
-      <h1 className="text-customGreen  text-2xl">Income Chart</h1>
+      <h1 className=" dark:text-yellow-700 text-customGreen  text-2xl">
+        Income Chart
+      </h1>
       <Line
         data={formattedData}
         options={{
