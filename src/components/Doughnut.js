@@ -58,7 +58,7 @@ function DonutChart({ incomePart, expensePart }) {
         delay: 0.4,
         scale: { type: "spring", visualDuration: 0.8, bounce: 0.3 },
       }}
-      className="flex flex-col justify-center items-center dark:bg-stone-400 bg-customwhite w-full sm:h-[100px] md:h-[300px] xl:h-[400px] md:w-2/5 xl:w-2/5 px-20 py-12  rounded-[56px]"
+      className="flex flex-col justify-center items-center dark:bg-stone-400 bg-customwhite w-full sm:h-[100px] md:h-[300px] xl:h-[420px] md:w-2/5 xl:w-2/5 px-20 py-12  rounded-[56px]"
     >
       <h2>Actions</h2>
       <Doughnut data={data} options={options} />

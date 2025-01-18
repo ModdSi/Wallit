@@ -12,10 +12,10 @@ function Percentage({ prop, imges, clr }) {
 
         scale: { type: "spring", visualDuration: 0.4, bounce: 0.3 },
       }}
-      className=" dark:bg-stone-400 bg-customwhite sm:text-sm flex flex-col justify-between items-center py-4 px-4 rounded-[36px] w-5/12 h-[180px] sm:h-[250px] md:w-1/4 md:h-[250px] xl:h-[250px]    md:rounded-[56px] "
+      className=" dark:bg-stone-400 bg-customwhite sm:text-sm flex flex-col justify-between items-center py-4 px-4 rounded-[36px] w-5/12 h-[200px] sm:h-[250px] md:w-1/4 md:h-[250px] xl:h-[300px]    md:rounded-[56px] "
     >
       {" "}
-      <img src={imges} className="w-1/5 ml-24 md:ml-36 xl:ml-36" />
+      <img src={imges} className="w-1/6 ml-24 md:ml-36 xl:ml-36" />
       <div className="text-4xl xl:text-6xl text-gray-600 mx-auto my-auto ">
         {" "}
         {prop ? prop : 0}%

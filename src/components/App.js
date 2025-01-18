@@ -83,7 +83,7 @@ function App() {
   var inORex = true;
   return (
     <div
-      className={`flex flex-col overflow-hidden ${
+      className={`flex flex-col overflow-hidden min-h-screen ${
         dark ? "dark" : "light"
       } dark:bg-stone-800 transition-all`}
     >
@@ -137,7 +137,7 @@ function App() {
           </div>
         </div>
       </div>
-      <Footer />
+      <Footer income={income} setIncome={setIncome} />
     </div>
   );
 }
