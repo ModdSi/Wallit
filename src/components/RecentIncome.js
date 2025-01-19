@@ -30,7 +30,7 @@ function RecentIncome({ income, inORex }) {
       <h1 className="text-lg mb-4 mt-2 mx-10 text-gray-700">Recent</h1>
       <div className="flex flex-col">
         {firstSixNegatives.length === 0 ? (
-          <div className="flex my-20 text-gray-400 mx-10 justify-center items-center flex-row">
+          <div className="flex my-28 text-gray-400 dark:text-gray-500 mx-10 justify-center items-center flex-row">
             <h1>No Data Yet</h1>
           </div>
         ) : (

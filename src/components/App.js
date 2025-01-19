@@ -31,7 +31,7 @@ function App() {
   }, [income]);
 
   ////////// for income chart //////////////
-  const moneyValues = income.map((entry) => {
+  const moneyValues = (income || []).map((entry) => {
     if (entry.money > 0) return entry.money;
   });
 
@@ -55,7 +55,7 @@ function App() {
   };
 
   //////////////  for expense chart  ////////////////////
-  const moneyValues2 = income.map((entry) => {
+  const moneyValues2 = (income || []).map((entry) => {
     if (entry.money < 0) return entry.money;
   });
 

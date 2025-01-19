@@ -32,7 +32,7 @@ function RecentIncome({ income, inORex }) {
       <div className="flex flex-col">
         {/* Check if there is no data */}
         {firstSixNegatives.length === 0 ? (
-          <div className="flex my-20 text-gray-400 mx-10 justify-center items-center flex-row">
+          <div className="flex  text-gray-400 dark:text-gray-500 mx-10 justify-center items-center my-28  flex-row">
             <h1>No Data Yet</h1>
           </div>
         ) : (

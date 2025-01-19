@@ -19,6 +19,7 @@ module.exports = {
     "./src/components/percentage.js",
     "./src/components/BarChart.js",
     "./src/components/Doughnut.js",
+    "./src/components/popup.js",
   ],
   darkMode: "selector",
   theme: {
