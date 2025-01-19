@@ -22,6 +22,10 @@ function App() {
   const [income, setIncome] = useState(storedData);
 
   useEffect(() => {
+    document.title = "Wallit";
+  }, []);
+
+  useEffect(() => {
     try {
       localStorage.setItem("key", JSON.stringify(income));
     } catch (e) {
