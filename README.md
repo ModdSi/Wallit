@@ -6,17 +6,17 @@ Wallit is a lightweight and user-friendly budgeting app that helps you track you
 
 ---
 
-## ✨ Features
+## Features
 
-- 📝 Add and categorize expenses
-- 📊 View spending summaries by category
-- 💾 Persistent data using browser local storage
-- ⚡ Fast and responsive UI with Tailwind CSS
-- 📱 Mobile-friendly design
+- Add and categorize expenses
+- View spending summaries by category
+- Persistent data using browser local storage
+- Fast and responsive UI with Tailwind CSS
+- Mobile-friendly design
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Frontend**: React.js, Tailwind CSS
 - **State Management**: React Hooks (useState, useEffect)
@@ -25,7 +25,7 @@ Wallit is a lightweight and user-friendly budgeting app that helps you track you
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 Make sure you have **Node.js** and **npm** installed.
