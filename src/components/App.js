@@ -11,7 +11,7 @@ import sun from "../images/sun.png";
 
 function App() {
   // localStorage.clear();
-  const [dark, setDark] = useState(true);
+  const [dark, setDark] = useState(false);
   const storedData = JSON.parse(localStorage.getItem("key"));
   if (!storedData) {
     localStorage.setItem(
@@ -46,11 +46,11 @@ function App() {
 
   console.log("this is money value for chart" + moneyValues);
   const formattedData = {
-    labels: labels2, // Use your actual labels
+    labels: labels2, 
     datasets: [
       {
         label: "Money Gained",
-        data: moneyValues, // Make sure this is an array of numbers matching the labels
+        data: moneyValues, 
         backgroundColor: "rgba(75,192,192,0.4)",
         borderColor: "#669835",
         borderWidth: 3,
@@ -68,11 +68,11 @@ function App() {
     labels.push(i.toString());
   }
   const formattedData2 = {
-    labels: labels, // Use your actual labels
+    labels: labels, 
     datasets: [
       {
         label: "Money Diclined",
-        data: moneyValues2, // Make sure this is an array of numbers matching the labels
+        data: moneyValues2, 
         backgroundColor: "rgba(75,192,192,0.4)",
         borderColor: "#903F3F",
         borderWidth: 3,
